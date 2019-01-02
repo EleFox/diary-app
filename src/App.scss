@@ -1,0 +1,38 @@
+@import "./common/style/commonValue";
+
+* {
+  font-family: $mainFontFamily;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.app-header {
+  width: 100%;
+  height: 45px;
+  background-color: $mainColor;
+  line-height: 45px;
+  .main-container {
+    max-width: $mainPanelWidth;
+    margin: 0 auto;
+  }
+  .nav-list {
+    text-align: left;
+    font-size: 0;
+    li {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 10px;
+      font-size: $mainFont;
+      color: $lightFontColor;
+      cursor: pointer;
+      &:hover, &.active {
+        color: $lightFontHoverColor;
+      }
+      & + li {
+        margin-left: 20px;
+      }
+    }
+  }
+}
