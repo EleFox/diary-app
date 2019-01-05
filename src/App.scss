@@ -1,11 +1,20 @@
 @import "./common/style/commonValue";
 
-* {
-  font-family: $mainFontFamily;
-}
-
-ul, ol {
-  list-style: none;
+.App {
+  * {
+    font-family: $mainFontFamily;
+  }
+  ul, menu, dir {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+  }
+  ul, ol {
+    list-style: none;
+  }
 }
 
 .app-header {
@@ -24,7 +33,7 @@ ul, ol {
       display: inline-block;
       vertical-align: top;
       padding: 0 10px;
-      font-size: $mainFont;
+      font-size: $mainFontSize;
       color: $lightFontColor;
       cursor: pointer;
       &:hover, &.active {

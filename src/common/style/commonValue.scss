@@ -6,14 +6,15 @@ $mainPanelWidth: 840px;
 // 文字色彩
 $mainFontColor: #303133;
 $fadeFontColor: #606266;
-$fontHover: $mainColor;
+$fontHoverColor: $mainColor;
+$notAllowedFontColor: #818181;
 $lightFontColor: #DDD;
 $lightFontHoverColor: #FFF;
 
 // 文字字体
-$mainFont: 16px;
-$minSizeFont: 14px;
-$emphasizeSizeFont: 18px;
+$mainFontSize: 16px;
+$miniFontSize: 14px;
+$emphasizeFontSize: 18px;
 
 // 字体
 $mainFontFamily: "Microsoft YaHei";

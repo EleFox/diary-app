@@ -1,5 +1,111 @@
 @import "../../common/style/commonValue";
 
 .diary-view {
-
+  max-width: $mainPanelWidth;
+  margin: 0 auto;
+  $calendarBorder: 1px solid #999;
+  .calendar {
+    width: 100%;
+    margin-top: 10px;
+    border: $calendarBorder;
+  }
+  .calendar-header {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    border-bottom: $calendarBorder;
+    color: $mainFontColor;
+    font-size: $mainFontSize;
+    line-height: 40px;
+    text-align: center;
+    .switch-btn {
+      display: inline-block;
+      color: $fadeFontColor;
+      font-size: $emphasizeFontSize;
+      cursor: pointer;
+    }
+    .pre-year {
+      float: left;
+      margin-left: 10px;
+    }
+    .next-year {
+      float: right;
+      margin-right: 10px;
+    }
+  }
+  .week-title {
+    display: flex;
+    width: 100%;
+    height: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    li {
+      color: $mainFontColor;
+      font-size: $mainFontSize;
+      line-height: 30px;
+      flex-basis: 12.6%;
+      text-align: center;
+    }
+  }
+  .calendar-body {
+    width: 100%;
+    height: 585px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    border-top: $calendarBorder;
+    .day-btn {
+      display: inline-block;
+      flex-basis: 12.6%;
+      height: 85px;
+      border: $calendarBorder;
+      position: relative;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        .normal-day {
+          color: $mainColor;
+        }
+        .chinese-day {
+          color: $mainColor;
+        }
+      }
+      .normal-day {
+        display: block;
+        height: 50px;
+        color: $fadeFontColor;
+        font-size: 35px;
+        font-family: "Arial";
+        line-height: 60px;
+      }
+      .chinese-day {
+        display: block;
+        height: 35px;
+        color: $fadeFontColor;
+        font-size: $miniFontSize;
+        line-height: 25px;
+      }
+      &.not-this-month {
+        background-color: #ccc;
+        cursor: default;
+        .normal-day {
+          color: $notAllowedFontColor;
+        }
+        .chinese-day {
+          color: $notAllowedFontColor;
+        }
+      }
+      &.active {
+        background-color: $mainColor;
+        .normal-day {
+          color: #fff;
+        }
+        .chinese-day {
+          color: #fff;
+        }
+      }
+    }
+  }
 }

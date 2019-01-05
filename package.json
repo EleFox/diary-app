@@ -114,7 +114,11 @@
     ]
   },
   "devDependencies": {
+    "animejs": "^2.2.0",
+    "lunar-calendar": "^0.1.4",
+    "moment": "^2.23.0",
     "node-sass": "^4.11.0",
+    "react-dom": "^16.7.0",
     "sass-loader": "^7.1.0"
   }
 }
